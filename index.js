@@ -1,8 +1,15 @@
-const container = document.querySelector("#container");
+const setRes = document.querySelector("#setRes");
 
+let root = 0;
 
-function makeDivs (container) {
-  let root = 16;
+setRes.addEventListener("click", () => {
+  root = prompt("Enter Number of Pixels per side:");
+  makeDivs(root);
+});
+
+function makeDivs () {
+
+  const container = document.querySelector("#container");
   let num = root * root;
 
   let rowNum = "";
@@ -29,4 +36,3 @@ function makeDivs (container) {
     }
 };
 
-makeDivs(container);
