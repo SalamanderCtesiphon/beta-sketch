@@ -31,10 +31,7 @@ function makeDivs () {
     div.style.flex = 1;
     div.setAttribute("class", "divChild");
     div.addEventListener("mouseover", () => {
-      div.style.backgroundColor = "gray";
-    });
-    div.addEventListener("mouseleave", () => {
-      div.style.backgroundColor = "white";
+      div.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
     });
     container.appendChild(div);
 
